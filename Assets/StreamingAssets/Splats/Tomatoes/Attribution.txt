@@ -1,0 +1,7 @@
+Title: LoMa Tomatoes v1
+Author: Gunes (https://superspl.at/user/value_of_music)
+Source: https://superspl.at/scene/cc31ab0e
+License: CC Attribution (Creative Commons Attribution)
+License URL: http://creativecommons.org/licenses/by/4.0/
+Requirements: Author must be credited. Commercial use is allowed.
+Adaptation: converted to streamed SOG LODs; placement adjusted for Reverie.

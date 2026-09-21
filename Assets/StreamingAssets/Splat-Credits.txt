@@ -1,0 +1,19 @@
+Ginger
+Original title: Kitty
+Author: AndyOne (andyone)
+Author's preferred attribution link: https://superspl.at/user?id=andyone
+Source: https://superspl.at/scene/79db08c0
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+Changes: renamed Ginger, converted to streamed SOG LODs, and placed in Reverie.
+The existing local capture was reused; no new download was made.
+
+Tomatoes
+Original title: LoMa Tomatoes v1
+Author: Gunes
+Author: https://superspl.at/user/value_of_music
+Source: https://superspl.at/scene/cc31ab0e
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+Changes: renamed Tomatoes, converted from the supplied PLY to streamed SOG LODs;
+rotated, scaled and placed on the island. Original source and supplied license retained.

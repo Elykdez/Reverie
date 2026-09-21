@@ -1,0 +1,21 @@
+{
+    "tool":  "@playcanvas/splat-transform@3.4.2",
+    "source":  "Assets/SceneData/Splats/Tomatoes/Source/Tomatoes.ply",
+    "sourceSha256":  "6BBCC602078B0CF50FDD343A2D919371FE12DD8875ACBCED905A9A9CA73D7D31",
+    "levels":  6,
+    "reductionPerLevel":  0.5,
+    "decimationDevice":  "auto",
+    "chunkCountK":  128,
+    "chunkExtent":  16,
+    "sphericalHarmonics":  "preserved",
+    "splatCounts":  [
+                        430777,
+                        215389,
+                        107695,
+                        53848,
+                        26924,
+                        13462
+                    ],
+    "durationSeconds":  72.6,
+    "generatedUtc":  "2026-09-29T06:09:22.4766777Z"
+}
