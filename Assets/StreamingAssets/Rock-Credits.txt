@@ -1,0 +1,10 @@
+Rock material: Rock 08
+Author: Rob Tuytel / Poly Haven
+Source: https://polyhaven.com/a/rock_08
+License: CC0 1.0 Universal
+https://polyhaven.com/license
+https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded 2026-09-20: 2K diffuse, OpenGL normal, ARM and displacement maps.
+ARM channels repacked into Unity URP metallic/occlusion/smoothness layout.
+The floating-island mesh was created for Reverie. The displacement map also
+drives baked mesh relief and the URP material's parallax effect.

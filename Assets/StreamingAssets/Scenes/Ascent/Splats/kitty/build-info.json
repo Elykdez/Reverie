@@ -1,0 +1,21 @@
+{
+    "tool":  "@playcanvas/splat-transform@3.4.2",
+    "source":  "Assets/SceneData/Ascent/Source/kitty.ply",
+    "sourceSha256":  "4B840A2F3CFE45CBEF93EA73175EE7E831DC88502E7017F106B1BF690BE35F18",
+    "levels":  6,
+    "reductionPerLevel":  0.5,
+    "decimationDevice":  "auto",
+    "chunkCountK":  128,
+    "chunkExtent":  16,
+    "sphericalHarmonics":  "preserved",
+    "splatCounts":  [
+                        1685069,
+                        842535,
+                        421268,
+                        210634,
+                        105317,
+                        52659
+                    ],
+    "durationSeconds":  176.8,
+    "generatedUtc":  "2026-09-20T06:28:08.3512331Z"
+}

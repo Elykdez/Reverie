@@ -1,0 +1,21 @@
+{
+  "tool": "@playcanvas/splat-transform@3.4.2",
+  "source": "Assets/SceneData/Cats/Oslo/Source/Oslo.ply",
+  "sourceSha256": "F5873ADAC3490F206F78958F73D3C728F50E00EE1188302A9365F4E7A1C4A245",
+  "levels": 6,
+  "reductionPerLevel": 0.5,
+  "decimationDevice": "auto",
+  "chunkCountK": 128,
+  "chunkExtent": 16,
+  "sphericalHarmonics": "preserved",
+  "splatCounts": [
+    1180389,
+    590195,
+    295098,
+    147549,
+    73775,
+    36888
+  ],
+  "durationSeconds": 144.6,
+  "generatedUtc": "2026-09-21T05:38:17.9138831Z"
+}

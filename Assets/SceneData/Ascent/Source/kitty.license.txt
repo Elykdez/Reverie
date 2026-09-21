@@ -1,0 +1,8 @@
+Title: Kitty (called Ginger in Reverie)
+Author: AndyOne (andyone)
+Attribution link: https://superspl.at/user?id=andyone
+Source: https://superspl.at/scene/79db08c0
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+Adaptation: renamed Ginger, converted to streamed SOG LODs and placed in Reverie.
+License verified from the source page; the already imported asset was reused.

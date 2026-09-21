@@ -1,0 +1,7 @@
+Title: oslo nap
+Author: J W (https://superspl.at/user/jwjw1228)
+Source: https://superspl.at/scene/5301d3f3
+License: CC Attribution (Creative Commons Attribution)
+License URL: http://creativecommons.org/licenses/by/4.0/
+Requirements: Author must be credited. Commercial use is allowed.
+Adaptation: converted to streamed SOG LODs; placement adjusted for Reverie.

@@ -1,0 +1,9 @@
+{
+  "name": "Reverie.Splats",
+  "rootNamespace": "Reverie.Splats",
+  "references": [
+    "Gsplat",
+    "Unity.Mathematics"
+  ],
+  "autoReferenced": true
+}

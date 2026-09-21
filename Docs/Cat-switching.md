@@ -1,0 +1,17 @@
+# Splat Library
+
+Open `Reverie > Splats` for the Splat Library. Its Collection tab automatically finds the scene's collection, `Assets/Bundles/Resources/Config/SplatCollection.asset`, which contains Ginger and Oslo. Each entry assigns an imported preview, streaming manifest, local position/rotation/scale, world-space camera focus and attribution. The tool supports Gaussian splat captures of any subject. Existing storage paths, serialized runtime types and asset GUIDs are retained for compatibility.
+
+`CatSwitcher` on GameManager is wired to the scene's existing renderer, streamer, loading blur and camera controls. It selects either cat uniformly at startup. Disable `randomOnStartup` to use `defaultIndex`. Swaps choose a different entry, cancel the previous stream, release its buffers, update both camera targets and restart the loading reveal. Music and island stay in place. Only previews and manifests are referenced by the collection; the full source PLYs are editor source assets, not runtime references.
+
+On mobile, two opposing acceleration peaks above `shakeThreshold` within `shakeWindow`, with a release between them, trigger a swap. Gravity is filtered out. The default is 1.5 g, a 0.75-second window and a 2.5-second cooldown. Input is ignored during loading, pause, focus loss or an input-blocking UI. Sensor discovery is retried for devices registered late. The accelerometer is shared with the gravity camera and is not disabled by the switcher. A physical-device check is needed to tune comfort for the target phone.
+
+Press N on desktop, use `SwapCat()` / `SelectCat(index)` at runtime, or use Show Selected Splat in the library. Edit Mode preview does not change random startup selection. To adjust a pose, choose a splat on the Collection tab and edit Position Offset, Rotation and Scale. Increase Y to raise it. Placement changes update the scene preview in Edit Mode; use Save Collection to persist the configuration. Camera focus is explicit because Oslo's scan contains distant, faint splats that would distort its bounding-box center. GameManager's Cat Switcher Inspector also links to the same library and retains its placement controls.
+
+## Importing
+
+Node.js/npx and PowerShell are required. In the library's Import PLY tab, choose a Gaussian splat PLY and a unique name, then Import into collection. This copies the source and adjacent license, generates six SOG LOD levels with pinned `@playcanvas/splat-transform@3.4.2`, creates preview/manifest assets, and adds an entry to the selected collection. New imports use `Assets/SceneData/Splats/<name>` and `Assets/StreamingAssets/Splats/<name>`. Existing folders are never overwritten. Conversion logs are in `Logs/splat-import.log`; failed imports retain their source files. On success, the library switches to the new entry for placement. The Gsplat package's own tools are unchanged.
+
+The converter can also be run directly, followed by `SplatLibraryWindow.ImportGenerated` from editor code. The returned CatEntry can be added to a collection. Import uses RUB coordinates, matching the supplied PLY/SOG captures. Fit each new capture's orientation and scale in the collection. The original source remains unchanged.
+
+Ginger's author and license were checked on its supplied SuperSplat page without downloading the asset. Oslo's supplied license is retained with its source. Full attribution ships in `Assets/StreamingAssets/Cat-Credits.txt` and each cat's collection entry.

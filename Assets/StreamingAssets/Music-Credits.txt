@@ -1,0 +1,15 @@
+Reverie ambient music
+
+Calm Ambient 1 (Synthwave 4k)
+Music by The Cynic Project / cynicmusic.com / pixelsphere.org
+Source: https://opengameart.org/content/calm-ambient-1-synthwave-4k
+Original download: https://opengameart.org/sites/default/files/001_Synthwave_4k_0.mp3
+License: CC0 1.0 Universal (public domain dedication)
+https://creativecommons.org/publicdomain/zero/1.0/
+https://creativecommons.org/publicdomain/zero/1.0/legalcode
+Retrieved: 2026-09-20
+
+Reverie adaptation: selected 00:05-02:27 and blended the last and first
+12 seconds into a continuous 130-second loop. Converted to stereo PCM WAV
+for Unity to encode as streaming Vorbis. Playback volume is 30%.
+Courtesy credit retained; attribution is not required by CC0.

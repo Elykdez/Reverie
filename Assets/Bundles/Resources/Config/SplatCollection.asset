@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 587e4852856e6c74ba65ac65ffcee2fa, type: 3}
+  m_Name: SplatCollection
+  m_EditorClassIdentifier: Reverie.Runtime::Hypocycloid.Reverie.Controller.CatCollection
+  cats:
+  - displayName: Ginger
+    preview: {fileID: 4599839170941234424, guid: 7e95a56d5debc5a4797d7bdc3a120fb3, type: 3}
+    manifest: {fileID: 11400000, guid: 143b6e3c8ea01af46ad4bbb4a102f657, type: 2}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: -0, y: 0, z: 180}
+    scale: 1
+    focusPoint: {x: -0.0002541703, y: 0.18411374, z: 0.0075870752}
+    attribution: Kitty by AndyOne (andyone) - https://superspl.at/scene/79db08c0
+      - https://superspl.at/user?id=andyone - CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
+      . Renamed Ginger; converted to streamed SOG LODs and positioned in Reverie.
+  - displayName: Oslo
+    preview: {fileID: 4599839170941234424, guid: 4d0257bc6e3a4a449b5fb1eb8f6cadaf, type: 3}
+    manifest: {fileID: 11400000, guid: 7a3eb44c5ef352a40a104e450b0fdd27, type: 2}
+    position: {x: 1, y: -0.3, z: 0}
+    rotation: {x: 0, y: 0, z: 180}
+    scale: 0.3
+    focusPoint: {x: 0, y: 0.15, z: 0}
+    attribution: 'Title: oslo nap
+
+      Author: J W (https://superspl.at/user/jwjw1228)
+
+      Source:
+      https://superspl.at/scene/5301d3f3
+
+      License: CC Attribution (Creative
+      Commons Attribution)
+
+      License URL: http://creativecommons.org/licenses/by/4.0/
+
+      Requirements:
+      Author must be credited. Commercial use is allowed.'
+  randomOnStartup: 1
+  defaultIndex: 0
+  shakeToSwap: 1
+  shakeThreshold: 1.5
+  shakeWindow: 0.75
+  swapCooldown: 2.5
+  keyboardShortcut: 1
