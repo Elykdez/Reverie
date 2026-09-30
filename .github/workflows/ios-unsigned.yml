@@ -2,6 +2,12 @@ name: Build unsigned iOS test IPA
 
 on:
   workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Release containing Reverie-Xcode.zip
+        required: true
+        default: v0.1.20260930-main.0
+        type: string
 
 permissions:
   contents: read
@@ -15,7 +21,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-        run: gh release download v0.1.20260930-main.0 --pattern Reverie-Xcode.zip --output Reverie-Xcode.zip
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: gh release download "$RELEASE_TAG" --pattern Reverie-Xcode.zip --output Reverie-Xcode.zip
 
       - name: Extract Xcode project
         run: unzip -q Reverie-Xcode.zip

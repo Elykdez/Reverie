@@ -7,6 +7,8 @@ using UnityEngine;
 
 namespace Hypocycloid.Reverie.Editor
 {
+    // Command line entry point:
+    // Unity -batchmode -quit -projectPath . -buildTarget iOS -executeMethod Hypocycloid.Reverie.Editor.IOSBuild.Export
     public static class IOSBuild
     {
         const string OutputPath = "Builds/iOS/Reverie";

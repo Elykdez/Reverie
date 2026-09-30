@@ -10,6 +10,8 @@ This could also be considered as my personal unity project template for using ga
 - Install **Git LFS** and run `git lfs install`, then clone and run `git lfs pull` before opening Unity.
 - Select **Android** in Unity's Build Profiles, then open `Assets/Scenes/Reverie.unity` and press Play.
 
+For an iPhone test build, see the [iOS export and sideloading guide](Docs/iOS-build.md).
+
 Ginger or Tomatoes is selected randomly at startup. Shake the phone twice in opposing directions, or press **N** on desktop, to switch after loading. Open **Reverie > Splats** for the **Splat Library**: use **Import PLY** to add captures, and **Collection** to configure placement, camera focus, playback and shake sensitivity. Settings are stored in `Assets/Bundles/Resources/Config/SplatCollection.asset`. See [splat setup](Docs/Splat-switching.md).
 
 ## Credits
