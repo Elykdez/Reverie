@@ -965,14 +965,7 @@ PlayerSettings:
   platformRequiresReadableAssets: 0
   virtualTexturingSupportEnabled: 0
   insecureHttpOption: 2
-  androidVulkanDenyFilterList:
-  - vendorName: ^Qualcomm$
-    deviceName: ^Adreno \(TM\) 660$
-    brandName: 
-    productName: 
-    androidOsVersionString: 
-    vulkanApiVersionString: 
-    driverVersionString: 0x80212000
+  androidVulkanDenyFilterList: []
   androidVulkanAllowFilterList: []
   androidVulkanDeviceFilterListAsset: {fileID: 7862867394083496736, guid: 35f5a920c527af346a3da0e1cff76419, type: 2}
   d3d12DeviceFilterListAsset: {fileID: 0}
