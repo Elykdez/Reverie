@@ -1,0 +1,47 @@
+name: Build unsigned iOS test IPA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-26-intel
+    timeout-minutes: 60
+    steps:
+      - name: Download exported Xcode project
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh release download v0.1.20260930-main.0 --pattern Reverie-Xcode.zip --output Reverie-Xcode.zip
+
+      - name: Extract Xcode project
+        run: unzip -q Reverie-Xcode.zip
+
+      - name: Compile for iPhone without signing
+        run: |
+          xcodebuild \
+            -project Reverie/Unity-iPhone.xcodeproj \
+            -scheme Unity-iPhone \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/DerivedData" \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Package IPA for local signing
+        run: |
+          app=$(find "$RUNNER_TEMP/DerivedData/Build/Products/Release-iphoneos" -maxdepth 1 -name '*.app' -print -quit)
+          test -n "$app"
+          mkdir Payload
+          cp -R "$app" Payload/
+          zip -qry Reverie-unsigned.ipa Payload
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Reverie-unsigned-ipa
+          path: Reverie-unsigned.ipa
+          retention-days: 7

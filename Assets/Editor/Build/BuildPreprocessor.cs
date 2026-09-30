@@ -10,8 +10,7 @@ using UnityEngine;
 
 namespace Hypocycloid.Reverie.Editor
 {
-    // Stamps every build with prefix.date-branch.revision, so an APK on a device can be
-    // traced back to the day and branch it came from without tagging anything by hand.
+    // Stamps builds with prefix.date-branch.revision, except for iOS's numeric version.
     public class BuildPreprocessor : IPreprocessBuildWithReport
     {
         const string ConfigPath = "Assets/Editor/BuildSettings.asset";
@@ -72,6 +71,10 @@ namespace Hypocycloid.Reverie.Editor
                 throw new InvalidOperationException(
                     $"Generated build version is not SemVer: {version}"
                 );
+
+            // iOS requires a numeric marketing version.
+            if (buildTarget == BuildTarget.iOS)
+                version = $"{prefix}.0";
 
             PlayerSettings.bundleVersion = version;
             if (buildTarget == BuildTarget.Android)
