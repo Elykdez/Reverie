@@ -14,10 +14,22 @@ namespace Hypocycloid.Reverie.Editor
     {
         public const string ScenePath = "Assets/Scenes/Reverie.unity";
         const string OutputPath = "Builds/Android/Reverie.apk";
+        const string ReleaseOutputPath = "Builds/Android/Reverie-release.apk";
         const string ReportPath = "Logs/android-build-result.txt";
 
         [MenuItem("Reverie/Android/Build APK")]
-        public static void Build()
+        public static void Build() => BuildPlayer(OutputPath, BuildOptions.Development);
+
+        [MenuItem("Reverie/Android/Build Release APK")]
+        public static void BuildRelease()
+        {
+            AndroidPlayerSetup.Apply();
+            if (!PlayerSettings.Android.useCustomKeystore)
+                throw new BuildFailedException("Release APK requires a custom signing keystore.");
+            BuildPlayer(ReleaseOutputPath, BuildOptions.None);
+        }
+
+        static void BuildPlayer(string outputPath, BuildOptions options)
         {
             RequireUsableSigning();
 
@@ -25,7 +37,7 @@ namespace Hypocycloid.Reverie.Editor
             if (!string.IsNullOrEmpty(addressables.Error))
                 throw new BuildFailedException("Addressables build failed: " + addressables.Error);
 
-            Directory.CreateDirectory(Path.GetDirectoryName(OutputPath));
+            Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
             Directory.CreateDirectory(Path.GetDirectoryName(ReportPath));
 
             BuildReport report;
@@ -34,9 +46,9 @@ namespace Hypocycloid.Reverie.Editor
                 report = BuildPipeline.BuildPlayer(new BuildPlayerOptions
                 {
                     scenes = new[] { ScenePath },
-                    locationPathName = OutputPath,
+                    locationPathName = outputPath,
                     target = BuildTarget.Android,
-                    options = BuildOptions.Development,
+                    options = options,
                 });
             }
             catch (Exception exception)
@@ -54,7 +66,7 @@ namespace Hypocycloid.Reverie.Editor
             if (summary.result != BuildResult.Succeeded)
                 throw new BuildFailedException($"Android build {summary.result} with {summary.totalErrors} errors");
 
-            Debug.Log($"[Build] Android APK written to {OutputPath} ({summary.totalSize} bytes)");
+            Debug.Log($"[Build] Android APK written to {outputPath} ({summary.totalSize} bytes)");
         }
 
         // Unity reports a half-configured keystore as a bare "Can not sign the application" after
